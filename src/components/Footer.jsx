@@ -42,15 +42,15 @@ const Footer = () => {
         {navItems.map((navItem, idx) => (
           <Link
             key={`link=${idx}`}
-            activeClass="active font-bold"
             to={navItem.link}
             smooth={true}
-            duration={500}
+            duration={100}
             spy={true}
+            className={
+              "flex items-center dark:text-neutral-50 text-neutral-600  cursor-pointer hover:bg-clip-text dark:hover:text-transparent dark:hover:bg-no-repeat dark:hover:bg-gradient-to-r dark:hover:from-purple-500 dark:hover:via-violet-500 dark:hover:to-pink-500 hover:text-transparent hover:bg-no-repeat hover:bg-gradient-to-r hover:from-purple-500 hover:via-violet-500 hover:to-pink-500 hover:ease-in-out hover:duration-300 hover:scale-105"
+            }
           >
-            <span className="text-sm sm:text-lg dark:text-neutral-50  text-neutral-600 dark:hover:text-neutral-300 hover:text-neutral-500">
-              {navItem.name}
-            </span>
+            <span className="text-sm sm:text-lg">{navItem.name}</span>
           </Link>
         ))}
       </motion.div>

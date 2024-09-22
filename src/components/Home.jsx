@@ -70,8 +70,9 @@ const Home = () => {
           <HoverBorderGradient
             containerClassName="rounded-full"
             as="a"
-            href="/public/resume/Tanvir-Sayyad.pdf"
+            href="/resume/Tanvir-Sayyad.pdf"
             download="Tanvir-Sayyad.pdf"
+            type="application/pdf"
             className="w-28 text-center dark:bg-white bg-black text-white dark:text-black space-x-2 hover:bg-white hover:text-black dark:hover:bg-black dark:hover:text-white"
             onClick={() => toast.success("CV Downloaded Successfully")}
           >

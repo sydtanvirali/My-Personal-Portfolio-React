@@ -34,7 +34,6 @@ const Skills = () => {
         >
           {SKILLS.map((e, i) => {
             let variantIndex = (i % 5) + 2;
-            console.log(variantIndex);
             return (
               <motion.div
                 key={e.label}
