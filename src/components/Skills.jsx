@@ -27,7 +27,7 @@ const Skills = () => {
           Skills
         </motion.h2>
         <motion.div
-          className="h-full grid grid-cols-3 md:grid-cols-6 lg:grid-cols-8 content-center gap-x-4 gap-y-8 md:gap-8 "
+          className="h-full grid grid-cols-4 md:grid-cols-6 lg:grid-cols-8 content-center gap-x-4 gap-y-8 md:gap-8 mx-10 md:mx-20"
           initial={{ scale: 0.8, opacity: 0 }}
           whileInView={{ scale: 1, opacity: 1 }}
           transition={{ duration: 0.5, type: "tween" }}

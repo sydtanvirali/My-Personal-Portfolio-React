@@ -29,20 +29,34 @@ const Navbar = () => {
     },
   ];
 
-  const [darkMode, setDarkMode] = useState(false);
+  // const [mode, setMode] = useState(false);
+  const [mode, setMode] = useState(
+    window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"
+  );
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
+    const handleThemeChange = (e) => {
+      setMode(e.matches ? "dark" : "light");
+    };
+    mediaQuery.addEventListener("change", handleThemeChange);
+    return () => {
+      mediaQuery.removeEventListener("change", handleThemeChange);
+    };
+  }, []);
 
   const toggleMode = () => {
-    setDarkMode(!darkMode);
+    // setMode(!mode);
+    setMode((prevTheme) => (prevTheme === "dark" ? "light" : "dark"));
   };
 
   useEffect(() => {
-    if (darkMode) {
+    if (mode === "dark") {
       document.documentElement.classList.add("dark");
     } else {
       document.documentElement.classList.remove("dark");
     }
-  }, [darkMode]);
-
+  }, [mode]);
   return (
     <div className="fixed w-full flex max-w-fit top-10 inset-x-0 mx-auto border border-transparent dark:border-white/[0.2] rounded-full dark:bg-black bg-white shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] z-[5000] p-8 py-3  items-center justify-center space-x-4">
       {navItems.map((navItem, idx) => (
@@ -61,7 +75,7 @@ const Navbar = () => {
         </Link>
       ))}
       <a className="flex items-center cursor-pointer" onClick={toggleMode}>
-        {darkMode ? (
+        {mode === "dark" ? (
           <svg
             xmlns="http://www.w3.org/2000/svg"
             height="1.125rem"
