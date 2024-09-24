@@ -17,7 +17,7 @@ const Skills = () => {
   });
   return (
     <section id="skills">
-      <BackgroundLines className="flex items-center flex-col gap-10 md:gap-5 py-10 md:py-20">
+      <BackgroundLines className="flex items-center flex-col gap-10 py-10 md:py-20">
         <motion.h2
           className="text-2xl md:text-3xl text-black dark:text-white"
           initial={{ scale: 0.8, opacity: 0 }}

@@ -36,7 +36,7 @@ const Contact = () => {
     <section id="contact">
       <Toaster position="top-right" theme="system" richColors={true} />
       <BackgroundBeamsWithCollision>
-        <div className="flex flex-col items-center  py-10 md:py-20 w-full">
+        <div className="flex flex-col items-center py-10 md:py-20 w-full">
           <motion.h2
             className="text-2xl md:text-3xl text-black dark:text-white"
             initial={{ scale: 0.8, opacity: 0 }}
