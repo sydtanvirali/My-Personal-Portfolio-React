@@ -72,6 +72,10 @@ export const SKILLS = [
     label: "Node",
   },
   {
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg",
+    label: "Next",
+  },
+  {
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg",
     label: "MongoDB",
   },
@@ -98,10 +102,6 @@ export const SKILLS = [
   {
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postman/postman-original.svg",
     label: "Postman",
-  },
-  {
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg",
-    label: "Figma",
   },
 ];
 

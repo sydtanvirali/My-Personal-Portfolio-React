@@ -29,7 +29,6 @@ const Navbar = () => {
     },
   ];
 
-  // const [mode, setMode] = useState(false);
   const [mode, setMode] = useState(
     window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"
   );
